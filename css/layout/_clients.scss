@@ -1,0 +1,85 @@
+@import "../abstracts/abstracts";
+@import "../base/base";
+@import "../components/components";
+
+.clients {
+  width: 100%;
+  padding-bottom: 150px;
+  &__title {
+    text-transform: uppercase;
+    color: #060505;
+    @include to_rem(35, 23, 400);
+    font-family: $ff_ops;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__sub_title {
+    color: #121111;
+    font-family: $ff_ops;
+    @include to_rem(17, 26, 400);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  &__btn_link {
+    @extend %btn;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+  }
+  &__last_blog{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .row {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+
+  .row__img_container {
+    width: 165px;
+    height: 114px;
+  }
+
+  .row__img {
+    @extend %img_prop;
+  }
+
+  .row__desc {
+    margin-left: 20px;
+  }
+
+  .row__title {
+    text-transform: uppercase;
+    color: #191919;
+    font-family: $ff_ops-b;
+    @include to_rem(14, 26, 400)
+  }
+
+  .row__text {
+    color: #acacac;
+    font-family: $ff_ops;
+    @include to_rem(14, 26, 400)
+  }
+}

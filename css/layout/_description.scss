@@ -1,0 +1,95 @@
+@import "../abstracts/abstracts";
+@import "../base/base";
+
+.description {
+  width: 100%;
+  height: fit-content;
+  background-image: url(#{$path}img/gallery/desc.png);
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 69px 0 54px 0;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+  }
+
+  &__items {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #ffffff;
+    @include to_rem(35, 26, 400);
+    margin-bottom: 23px;
+  }
+
+  &__sub_title {
+    text-transform: uppercase;
+    color: #ffffff;
+    @include to_rem(17, 26, 400);
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-family: $ff_ops;
+    @include to_rem(17, 26, 400);
+    margin-bottom: 45px;
+  }
+
+  &__btn {
+    padding: 10px 25px;
+    border: none;
+    background-color: $white;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: $ff_ops;
+    @include to_rem(17, 26, 400);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    &:hover:before{
+      top: 0;
+      left: 0;
+    }
+    &:before{
+      content: "get a quote";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      background-color: $red;
+      color: #fff;
+      border-radius: 5px;
+      transition: all 0.4s;
+    }
+  }
+}
+

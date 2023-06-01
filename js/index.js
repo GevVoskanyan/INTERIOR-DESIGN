@@ -1,0 +1,50 @@
+AOS.init();
+$('.owl__header').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    autoplay:false,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    smartSpeed:500,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:1,
+            nav:false
+        },
+        992:{
+            items:1,
+            nav:false
+        },
+        993:{
+            items:1,
+            nav:true
+        },
+        1366:{
+            items:1
+        },
+    }})
+$('.projects__owl').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1,
+            nav:false
+        },
+        1170:{
+            items:3,
+        },
+        1366:{
+            items:3
+        },
+    }
+})

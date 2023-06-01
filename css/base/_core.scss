@@ -1,0 +1,72 @@
+@import "../abstracts/abstracts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: $white;
+  color: #000000;
+  font-size: 16px;
+  font-family:$ff_pop;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.h2 {
+  @include to_rem(50, 137, 700);
+}
+.clear{
+  clear: both;
+}
+.lst {
+  list-style-type: none;
+}
+.df{
+  display: flex;
+}
+.tdn{
+  text-decoration: none;
+}
+.mb{
+  margin-bottom: 50px;
+}
+.trough{
+  text-decoration: line-through;
+}
+.left{
+  left: 80px;
+}
+.content__right{
+  color:$SpruceYellow ;
+  margin-left: 5px;
+}
+.bb{
+  border-bottom: 1px solid #202020;
+}
+.bl{
+  border-right: 1px solid #202020;
+}
+.mrl{
+  margin-right: 10px;
+}
+.mr{
+  margin-right: 40px;
+}
+.mbi{
+  margin-bottom: 30px;
+}
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}

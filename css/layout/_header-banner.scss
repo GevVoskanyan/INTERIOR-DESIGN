@@ -1,0 +1,253 @@
+@import "../abstracts/abstracts";
+@import "../base/base";
+
+.header__banner {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  overflow: hidden;
+.nav{
+  display: flex;
+}
+  .nav__blog{
+    display: flex;
+  }
+  .nav__list{
+    margin-right: 20px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+.nav__link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  &:hover{
+color:#000  }
+}
+  .menu__check{
+    display: none;
+  }
+  &_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+  }
+.header{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:auto;
+  display: flex;
+  align-items: center;
+  padding: 33px 45px 0;
+  z-index: 111111111;
+  background-color: $red;
+}
+  .header__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_desc {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $red;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .item__name{
+    margin-right: 10px;
+  }
+.all__header__content{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+  .header__banner_logo {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .header__banner_logo_img {
+    @extend %img_prop
+  }
+
+  .desc__number {
+    color: $white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: absolute;
+    bottom: 60px;
+    left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .number {
+
+  }
+
+  .number__line {
+    width: 43px;
+    height: 1px;
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+
+  &_desc_items {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+  }
+
+  .slider__number {
+    color: $white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: absolute;
+    bottom: 60px;
+    right: 35px;
+    z-index: 11111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .s_number__line {
+    @extend .number__line
+  }
+
+  &_desc_title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: $ff_pop;
+    @include to_rem(147, 126, 400);
+    margin-bottom: 44px;
+  }
+
+  &_desc_text {
+    color: #ffffff;
+    @include to_rem(16, 31, 400);
+    margin-bottom: 55px;
+  }
+
+  &_desc_btn {
+    border: none;
+    background-color: $white;
+    padding: 25px 40px;
+    text-transform: uppercase;
+    color: #090808;
+    font-family: $ff_pop;
+    @include to_rem(17, 0, 400);
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+    &:hover:before{
+      top: 0;
+      left: 0;
+    }
+    &:before{
+      content: "contact us";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 7px;
+      top: -100%;
+      left: -100%;
+      background-color: #000;
+      color: $white;
+      transition: all 0.4s;
+    }
+  }
+
+  &_slider {
+    width: 60%;
+    height:900px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+.owl__header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .owl__header_item {
+    width: 100%;
+    height: 900px;
+
+    .owl__header_img {
+      @extend %img_prop;
+    }
+  }
+
+  .owl-nav .owl-prev [aria-label="Previous"] {
+    color: $white;
+    font-size: 0;
+
+    &::before {
+      content: "\f060";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 15px;
+      padding: 20px;
+      background-color: #ab9d92;
+      position: absolute;
+      bottom: 55px;
+      left: -51px;
+      z-index: 11;
+    }
+  }
+
+  .owl-nav .owl-next [aria-label="Next"] {
+    color: $white;
+    font-size: 0;
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f061";
+      font-size: 15px;
+      padding: 20px;
+      background-color: $red;
+      position: absolute;
+      bottom: 110px;
+      left: -2px;
+    }
+  }
+}
+

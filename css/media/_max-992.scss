@@ -1,0 +1,167 @@
+@import "../abstracts/abstracts";
+
+.about__left, .about__right {
+  width: 80%;
+}
+
+.concept__content {
+  justify-content: center;
+}
+
+.concept__item {
+  width: 80%;
+
+  &:nth-child(1) {
+    margin-bottom: 20px;
+  }
+}
+
+.description {
+  padding: 20px;
+}
+
+.description__items {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.all__header__content {
+}
+
+.header__banner_desc {
+  width: 100%;
+  height: 500px;
+}
+
+.header__banner_slider {
+  width: 100%;
+  height: 400px;
+}
+
+.owl__header {
+  width: 100%;
+}
+
+.owl__header_item {
+  width: 100%;
+}
+
+.header__banner_desc_items {
+  position: relative;
+}
+
+.header__banner_desc_title {
+  @include to_rem(40, 40, 400);
+}
+
+.header__banner_desc_text {
+  @include to_rem(16, 16, 400);
+}
+
+.header__banner_desc_btn {
+}
+
+.contact__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact__title {
+  text-align: center;
+}
+
+.contact__form {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.contact__form {
+  width: 100%;
+}
+
+.contact .map {
+  width: 100%;
+}
+
+.nav {
+  position: absolute;
+  right: -100%;
+  top: 75px;
+  width: 50%;
+  height: 100vh;
+  background-color: #000;
+  &:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: rgba(#000,0.5);
+  }
+  &__blog {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &__list {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 20px;
+  }
+}
+
+.menu__check_label {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+ .menu__check:checked {
+  & ~ .menu__check_label{
+    .menu__check_line{
+      top: 0;
+      &:nth-child(1){
+        transform: rotate(45deg);
+      }
+      &:nth-child(2){
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:nth-child(3){
+        transform: rotate(-45deg);
+      }
+    }
+  }
+   & ~ nav{
+     right: 0;
+   }
+}
+
+.menu__check_line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.4s;
+
+  &:nth-child(2) {
+    top: 10px;
+  }
+  &:nth-child(3) {
+    top: 20px;
+  }
+}
+.nav__link:hover{
+  background-color: #e83b3a;
+}
